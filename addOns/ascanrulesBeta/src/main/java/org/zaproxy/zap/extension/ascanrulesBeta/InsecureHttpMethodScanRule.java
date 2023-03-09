@@ -580,11 +580,6 @@ public class InsecureHttpMethodScanRule extends AbstractAppPlugin {
         LOGGER.debug("Request Method: {}", httpMethod);
         LOGGER.debug("Response Code: {}", responseCode);
 
-        if ((httpMethod.equals(HttpRequestHeader.PUT) || httpMethod.equals(HttpRequestHeader.PATCH))
-                && (msg.getResponseHeader().isJson() || msg.getResponseHeader().isXml())) {
-            return;
-        }
-
         if (isPage200(msg) || responseCode == HttpStatusCode.CREATED) {
             evidence =
                     Constant.messages.getString(

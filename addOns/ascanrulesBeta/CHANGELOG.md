@@ -11,7 +11,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Maintenance changes.
 - The Log4Shell scan rule alerts now include Alert References and Tags.
 - The Spring4Shell scan rule now includes a CVE Alert Tag and reference link.
-- The Insecure HTTP Method Scan rule now allows PUT/PATCH methods, if they return JSON or XML data in response (Issue 7772).
 
 ### Fixed
 - Use same non-default port in the HTTP Only Site scan rule.
